@@ -10,11 +10,9 @@ function Home() {
   );
 
   const stats = response || [];
-  // console.log(JSON.stringify(stats.lastUpdate));
-  const formattedDate = dateString => format(
-    parseISO(dateString || new Date()),
-    "MM/dd/yyyy, HH:mm aa"
-  );
+
+  const formattedDate = dateString =>
+    format(parseISO(dateString || new Date()), "MM/dd/yyyy, HH:mm aa");
 
   return (
     <div>
@@ -35,7 +33,9 @@ function Home() {
           {error && <p className="error">{error.message}</p>}
         </section>
       </main>
-      <Footer lastUpdated={stats.lastUpdate && formattedDate(stats.lastUpdate)} />
+      <Footer
+        lastUpdated={stats.lastUpdate && formattedDate(stats.lastUpdate)}
+      />
     </div>
   );
 }

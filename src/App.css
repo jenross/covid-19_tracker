@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.globalHeader {
+  font-size: 2.2rem;
+}
+
+.globalNum {
+  font-size: 1.8rem;
+}
