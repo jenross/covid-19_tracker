@@ -4,7 +4,7 @@ import { Card, CardBody, CardTitle } from "reactstrap";
 
 const GlobalStats = ({ confirmed, dead, recovered }) => {
   return (
-    <section>
+    <section className="globalStats">
       <>
         <div className="card-big-shadow">
           <Card

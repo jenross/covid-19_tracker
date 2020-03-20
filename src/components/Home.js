@@ -1,6 +1,7 @@
 import React from "react";
 import GlobalStats from "./GlobalStats";
 import useFetch from "../utils/useReducer";
+import Nav from "./Nav";
 import Footer from "./Footer";
 import { format, parseISO } from "date-fns";
 
@@ -15,9 +16,10 @@ function Home() {
     format(parseISO(dateString || new Date()), "MM/dd/yyyy, HH:mm aa");
 
   return (
-    <div>
-      <header>
-        <h1>Covid-19 Tracker</h1>
+    <div className="homePage">
+      <Nav />
+      <header className="homeHeader">
+        <h1>Global Stats</h1>
       </header>
       <main>
         <section>

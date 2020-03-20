@@ -44,3 +44,23 @@
 .globalNum {
   font-size: 1.8rem;
 }
+
+.homeHeader {
+  padding: 4rem;
+  text-align: center; 
+}
+
+.homePage {
+  background-color: #eeeeee;
+}
+
+.globalStats {
+  display: flex; 
+  justify-content: space-around; 
+  flex-wrap: wrap; 
+  margin-bottom: 5rem;
+}
+
+.social-area p {
+  font-size: 0.8rem;
+}
