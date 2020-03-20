@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.1.2",
     "d3-fetch": "^1.1.2",
     "d3-scale": "^3.2.1",
+    "date-fns": "^2.11.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-router-dom": "^5.1.2",

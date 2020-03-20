@@ -10,6 +10,7 @@ import {
 } from "react-simple-maps";
 import useFetch from "../utils/useReducer";
 import allStates from "../utils/allStates.json";
+import { format } from "date-fns";
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
 
@@ -55,7 +56,12 @@ function US({ setTooltipContent }) {
                     fill="#DDD"
                     onMouseEnter={() => {
                       const abbrev = allStates.find(s => s.val === geo.id);
+
                       for (let i = 0; i < stats.length; i++) {
+                        const formattedDate = format(
+                          new Date(stats[i] && stats[i].lastUpdateEt),
+                          "MM/dd hh:mm aa"
+                        );
                         if (abbrev.id === stats[i].state) {
                           setTooltipContent(
                             <StateStats
@@ -65,7 +71,7 @@ function US({ setTooltipContent }) {
                               death={
                                 (stats[i] && stats[i].death) || "None reported"
                               }
-                              lastUpdate={stats[i] && stats[i].lastUpdateEt}
+                              lastUpdate={formattedDate}
                             />
                           );
                         }

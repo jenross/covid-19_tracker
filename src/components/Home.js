@@ -1,6 +1,8 @@
 import React from "react";
 import GlobalStats from "./GlobalStats";
 import useFetch from "../utils/useReducer";
+import Footer from "./Footer";
+import { format, parseISO } from "date-fns";
 
 function Home() {
   const [response, loading, error] = useFetch(
@@ -8,6 +10,11 @@ function Home() {
   );
 
   const stats = response || [];
+  // console.log(JSON.stringify(stats.lastUpdate));
+  const formattedDate = dateString => format(
+    parseISO(dateString || new Date()),
+    "MM/dd/yyyy, HH:mm aa"
+  );
 
   return (
     <div>
@@ -28,6 +35,7 @@ function Home() {
           {error && <p className="error">{error.message}</p>}
         </section>
       </main>
+      <Footer lastUpdated={stats.lastUpdate && formattedDate(stats.lastUpdate)} />
     </div>
   );
 }
