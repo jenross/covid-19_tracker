@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
-// import US from "../components/US";
 import Home from "../components/Home";
 import USPage from "../components/USPage";
 

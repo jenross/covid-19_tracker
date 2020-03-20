@@ -8,14 +8,10 @@ import {
   Marker,
   Annotation
 } from "react-simple-maps";
-
+import useFetch from "../utils/useReducer";
 import allStates from "../utils/allStates.json";
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
-
-const LOADING = "LOADING";
-const RESPONSE_COMPLETE = "RESPONSE_COMPLETE";
-const ERROR = "ERROR";
 
 const offsets = {
   VT: [50, -8],
@@ -27,62 +23,6 @@ const offsets = {
   DE: [33, 0],
   MD: [47, 10],
   DC: [49, 21]
-};
-
-const fetchReducer = (state, action) => {
-  if (action.type === LOADING) {
-    return {
-      result: null,
-      loading: true,
-      error: null
-    };
-  }
-
-  if (action.type === RESPONSE_COMPLETE) {
-    return {
-      result: action.payload.response,
-      loading: false,
-      error: null
-    };
-  }
-
-  if (action.type === ERROR) {
-    return {
-      result: null,
-      loading: false,
-      error: action.payload.error
-    };
-  }
-
-  return state;
-};
-
-const useFetch = url => {
-  const [state, dispatch] = React.useReducer(fetchReducer, initialState);
-
-  React.useEffect(() => {
-    dispatch({ type: LOADING });
-
-    const fetchUrl = async () => {
-      try {
-        const response = await fetch(url);
-        const data = await response.json();
-
-        dispatch({ type: RESPONSE_COMPLETE, payload: { response: data } });
-      } catch (error) {
-        dispatch({ type: ERROR, payload: { error } });
-      }
-    };
-
-    fetchUrl();
-  }, [url]);
-  return [state.result, state.loading, state.error];
-};
-
-const initialState = {
-  error: null,
-  loading: false,
-  result: null
 };
 
 function US({ setTooltipContent }) {
@@ -122,7 +62,9 @@ function US({ setTooltipContent }) {
                               state={stats[i] && stats[i].state}
                               positive={stats[i] && stats[i].positive}
                               negative={stats[i] && stats[i].negative}
-                              death={stats[i] && stats[i].death}
+                              death={
+                                (stats[i] && stats[i].death) || "None reported"
+                              }
                               lastUpdate={stats[i] && stats[i].lastUpdateEt}
                             />
                           );
