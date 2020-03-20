@@ -47,7 +47,7 @@
 
 .homeHeader {
   padding: 4rem;
-  text-align: center; 
+  text-align: center;
 }
 
 .homePage {
@@ -55,12 +55,17 @@
 }
 
 .globalStats {
-  display: flex; 
-  justify-content: space-around; 
-  flex-wrap: wrap; 
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   margin-bottom: 5rem;
 }
 
-.social-area p {
+.social-area p, .copyright p {
   font-size: 0.8rem;
 }
+
+/* .card-big-shadow {
+  width: 400px;
+  height: 200px; 
+} */

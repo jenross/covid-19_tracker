@@ -58,6 +58,7 @@ const GlobalStats = ({ confirmed, dead, recovered }) => {
             data-background="color"
             data-color="orange"
             data-radius="none"
+            id="deaths-card"
           >
             <CardBody>
               <CardTitle>
