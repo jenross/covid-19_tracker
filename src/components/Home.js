@@ -1,6 +1,9 @@
 import React from "react";
 import GlobalStats from "./GlobalStats";
+import Loading from "./Loading";
+import ThemeContext from "../contexts/theme";
 import useFetch from "../utils/useReducer";
+import AppTheme from "../utils/AppTheme";
 
 import Footer from "./Footer";
 
@@ -13,12 +16,19 @@ function Home() {
   );
 
   const stats = response || [];
-
+  const theme = React.useContext(ThemeContext);
+  const currentTheme = AppTheme[theme];
   const formattedDate = dateString =>
     format(parseISO(dateString || new Date()), "MM/dd/yyyy, HH:mm");
 
   return (
-    <div className="homePage">
+    <div
+      className="homePage"
+      style={{
+        backgroundColor: `${currentTheme.backgroundColor}`,
+        color: `${currentTheme.textColor}`
+      }}
+    >
       <header className="homeHeader">
         <h1>Global Stats</h1>
         <p className="lastUpdated">
@@ -33,7 +43,7 @@ function Home() {
       <main>
         <section>
           {loading ? (
-            <p>Loading…</p>
+            <Loading text="Retrieving global data..." />
           ) : (
             <GlobalStats
               confirmed={stats.confirmed && stats.confirmed.value}

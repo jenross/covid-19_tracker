@@ -66,8 +66,8 @@
 }
 
 .footer-text {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .footer-text p {
@@ -80,10 +80,6 @@
 
 .footer-text a:hover {
   color: #8b0000;
-}
-
-.row {
-  justify-content: center;
 }
 
 #confirmed {
@@ -121,4 +117,9 @@
 
 .navbar-brand:hover {
   color: #dc143c !important;
+}
+
+.dark {
+  color: #dadada;
+  background: #1c2022;
 }

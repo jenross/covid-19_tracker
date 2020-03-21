@@ -16,17 +16,15 @@ function App() {
     <Router>
       <ThemeProvider value={theme}>
         <div className={theme}>
-          <div>
-            <Nav toggleTheme={toggleTheme} />
+          <Nav toggleTheme={toggleTheme} />
 
-            <React.Suspense fallback={<Loading />}>
-              <Switch>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/us" component={USPage} />
-                <Route render={() => <h1>404</h1>} />
-              </Switch>
-            </React.Suspense>
-          </div>
+          <React.Suspense fallback={<Loading />}>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/us" component={USPage} />
+              <Route render={() => <h1>404</h1>} />
+            </Switch>
+          </React.Suspense>
         </div>
       </ThemeProvider>
     </Router>

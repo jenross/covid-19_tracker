@@ -1,4 +1,5 @@
 import React, { memo } from "react";
+import Loading from "./Loading";
 import StateStats from "./StateStats";
 import { geoCentroid } from "d3-geo";
 import {
@@ -40,7 +41,7 @@ function US({ setTooltipContent }) {
       </header>
       <main>
         <section>
-          {loading && <p>Loading...</p>}
+          {loading && <Loading text="Retrieving US data..." />}
 
           {error && <p className="error">{error.message}</p>}
         </section>

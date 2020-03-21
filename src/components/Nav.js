@@ -1,17 +1,29 @@
 import React from "react";
 import ThemeContext from "../contexts/theme";
 import { Link } from "react-router-dom";
+import NavTheme from "../utils/NavTheme";
 
 export default function Nav({ toggleTheme }) {
   const theme = React.useContext(ThemeContext);
+  const currentTheme = NavTheme[theme];
   return (
     <nav
       id="navbar-main"
       class="fixed-top navbar navbar-expand-lg headroom--not-top headroom--not-bottom headroom headroom--pinned"
+      style={{
+        backgroundColor: `${currentTheme.backgroundColor}`
+      }}
     >
       <div class="container">
         <div class="navbar-translate">
-          <Link d="navbar-brand" class="navbar-brand" to="/">
+          <Link
+            d="navbar-brand"
+            class="navbar-brand"
+            to="/"
+            style={{
+              color: `${currentTheme.textColor}`
+            }}
+          >
             Covid-19 Tracker
           </Link>
         </div>
@@ -23,6 +35,9 @@ export default function Nav({ toggleTheme }) {
                 class="mr-4 nav-link"
                 aria-expanded="false"
                 to="/"
+                style={{
+                  color: `${currentTheme.textColor}`
+                }}
               >
                 World
               </Link>
@@ -33,11 +48,24 @@ export default function Nav({ toggleTheme }) {
                 class="mr-4 nav-link"
                 aria-expanded="false"
                 to="/us"
+                style={{
+                  color: `${currentTheme.textColor}`
+                }}
               >
                 US
               </Link>
             </li>
-            {theme === "light" ? "🔦" : "💡"}
+            <button
+              style={{
+                border: `${currentTheme.backgroundColor}`,
+                fontSize: 26,
+                backgroundColor: `${currentTheme.backgroundColor}`
+              }}
+              className="btn-clear"
+              onClick={toggleTheme}
+            >
+              {theme === "light" ? "🔦" : "💡"}
+            </button>
           </ul>
         </div>
       </div>
