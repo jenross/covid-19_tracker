@@ -51,9 +51,9 @@ function US({ setTooltipContent }) {
                 {geographies.map(geo => (
                   <Geography
                     key={geo.rsmKey}
-                    stroke="#FFF"
+                    stroke="#000"
                     geography={geo}
-                    fill="#EEE"
+                    fill="#808080"
                     onMouseEnter={() => {
                       const abbrev = allStates.find(s => s.val === geo.id);
 
@@ -82,15 +82,15 @@ function US({ setTooltipContent }) {
                     }}
                     style={{
                       default: {
-                        fill: "#D6D6DA",
+                        fill: "#B0C4DE",
                         outline: "none"
                       },
                       hover: {
-                        fill: "#F53",
+                        fill: "#B22222",
                         outline: "none"
                       },
                       pressed: {
-                        fill: "#E42",
+                        fill: "#B22222",
                         outline: "none"
                       }
                     }}

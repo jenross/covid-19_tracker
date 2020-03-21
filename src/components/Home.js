@@ -4,8 +4,6 @@ import useFetch from "../utils/useReducer";
 import Nav from "./Nav";
 import Footer from "./Footer";
 import { format, parseISO } from "date-fns";
-import { IconContext } from "react-icons";
-import { GiEarthAmerica } from "react-icons/gi";
 import earthdark from "../assets/img/earth_dark.svg";
 
 function Home() {
@@ -27,11 +25,6 @@ function Home() {
             Last updated: {stats.lastUpdate && formattedDate(stats.lastUpdate)}
           </p>
         <img className="earthVector" src={earthdark} alt="svg outline of earth" />
-        {/* <IconContext.Provider value={{ color: "blue", size: "100px" }}>
-          <div>
-            <GiEarthAmerica />
-          </div>
-        </IconContext.Provider> */}
       </header>
       <main>
         <section>

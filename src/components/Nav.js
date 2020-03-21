@@ -1,15 +1,5 @@
 import React from "react";
-import Headroom from "headroom.js";
 import { Link } from "react-router-dom";
-// export default function HeadroomSample() {
-//   React.useEffect(() => {
-//     // note that the domElement should be a valid dom element
-//     // something like document.getElementById("my-id")
-//     let headroom = new Headroom(domElement);
-//     // initialise
-//     headroom.init();
-//   });
-// }
 
 export default function Nav() {
   return (
@@ -25,6 +15,7 @@ export default function Nav() {
         </div>
         <div>
           <ul class="ml-auto navbar-nav">
+    
             <li class="nav-item">
               <Link
                 aria-haspopup="true"
