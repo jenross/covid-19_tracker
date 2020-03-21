@@ -30,6 +30,16 @@ export default function Nav() {
                 aria-haspopup="true"
                 class="mr-4 nav-link"
                 aria-expanded="false"
+                to="/"
+              >
+                World
+              </Link>
+            </li>
+            <li class="nav-item">
+              <Link
+                aria-haspopup="true"
+                class="mr-4 nav-link"
+                aria-expanded="false"
                 to="/us"
               >
                 US

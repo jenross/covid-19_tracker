@@ -34,9 +34,9 @@ function US({ setTooltipContent }) {
   const stats = response || [];
 
   return (
-    <div>
-      <header>
-        <h1>USA</h1>
+    <div className="usPage">
+      <header className="usHeader">
+        <h1>US Stats</h1>
       </header>
       <main>
         <section>
@@ -44,7 +44,7 @@ function US({ setTooltipContent }) {
 
           {error && <p className="error">{error.message}</p>}
         </section>
-        <ComposableMap data-tip="" projection="geoAlbersUsa">
+        <ComposableMap data-tip="" projection="geoAlbersUsa" className="us-map">
           <Geographies geography={geoUrl}>
             {({ geographies }) => (
               <>
@@ -53,7 +53,7 @@ function US({ setTooltipContent }) {
                     key={geo.rsmKey}
                     stroke="#FFF"
                     geography={geo}
-                    fill="#DDD"
+                    fill="#EEE"
                     onMouseEnter={() => {
                       const abbrev = allStates.find(s => s.val === geo.id);
 
