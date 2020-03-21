@@ -9,6 +9,7 @@ import Footer from "./Footer";
 
 import { format, parseISO } from "date-fns";
 import earthdark from "../assets/img/earth_dark.svg";
+import earthlight from "../assets/img/earth_white.svg";
 
 function Home() {
   const [response, loading, error] = useFetch(
@@ -34,11 +35,19 @@ function Home() {
         <p className="lastUpdated">
           Last updated: {stats.lastUpdate && formattedDate(stats.lastUpdate)}
         </p>
-        <img
-          className="earthVector"
-          src={earthdark}
-          alt="svg outline of earth"
-        />
+        {theme === "light" ? (
+          <img
+            src={earthdark}
+            className="earthVector"
+            alt="svg outline of earth"
+          />
+        ) : (
+          <img
+            src={earthlight}
+            className="earthVector"
+            alt="svg outline of earth"
+          />
+        )}
       </header>
       <main>
         <section>
