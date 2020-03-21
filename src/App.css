@@ -46,12 +46,14 @@
   font-size: 1.8rem;
 }
 
-.homeHeader, .usHeader {
+.homeHeader,
+.usHeader {
   padding: 4rem;
   text-align: center;
 }
 
-.homePage, .usPage {
+.homePage,
+.usPage {
   background-color: #eeeeee;
 }
 
@@ -70,6 +72,14 @@
 
 .footer-text p {
   font-size: 0.8rem;
+}
+
+.footer-text a {
+  color: #dc143c;
+}
+
+.footer-text a:hover {
+  color: #8b0000;
 }
 
 .row {
@@ -103,4 +113,12 @@
 
 .us-map {
   margin-top: -10rem;
+}
+
+.nav-link:hover {
+  color: #dc143c !important;
+}
+
+.navbar-brand:hover {
+  color: #dc143c !important;
 }

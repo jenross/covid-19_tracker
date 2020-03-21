@@ -1,8 +1,9 @@
 import React from "react";
 import GlobalStats from "./GlobalStats";
 import useFetch from "../utils/useReducer";
-import Nav from "./Nav";
+
 import Footer from "./Footer";
+
 import { format, parseISO } from "date-fns";
 import earthdark from "../assets/img/earth_dark.svg";
 
@@ -18,13 +19,16 @@ function Home() {
 
   return (
     <div className="homePage">
-      <Nav />
       <header className="homeHeader">
         <h1>Global Stats</h1>
         <p className="lastUpdated">
-            Last updated: {stats.lastUpdate && formattedDate(stats.lastUpdate)}
-          </p>
-        <img className="earthVector" src={earthdark} alt="svg outline of earth" />
+          Last updated: {stats.lastUpdate && formattedDate(stats.lastUpdate)}
+        </p>
+        <img
+          className="earthVector"
+          src={earthdark}
+          alt="svg outline of earth"
+        />
       </header>
       <main>
         <section>
@@ -38,7 +42,6 @@ function Home() {
             />
           )}
           {error && <p className="error">{error.message}</p>}
-        
         </section>
       </main>
       <Footer />
