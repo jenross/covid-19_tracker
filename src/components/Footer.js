@@ -1,12 +1,12 @@
 import React from "react";
 
-export default function Footer({ lastUpdated }) {
+export default function Footer() {
   return (
-    <footer class="footer footer-big">
+    <footer class="footer">
       <div class="container">
         <div class="row">
-          <div class="col-sm-2 col-md-4">
-            <div class="social-area">
+       
+            <div class="footer-text">
               <p>
                 © 2020, developed by{" "}
                 <a
@@ -17,7 +17,6 @@ export default function Footer({ lastUpdated }) {
                   Jennifer Ross
                 </a>
               </p>
-              <p>Last updated: {lastUpdated}</p>
               <p>
                 Global data:{" "}
                 <a
@@ -42,7 +41,7 @@ export default function Footer({ lastUpdated }) {
               </p>
             </div>
           </div>
-        </div>
+       
       </div>
     </footer>
   );

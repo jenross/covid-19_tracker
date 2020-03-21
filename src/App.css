@@ -39,6 +39,7 @@
 
 .globalHeader {
   font-size: 2.2rem;
+  margin-bottom: 0.5rem;
 }
 
 .globalNum {
@@ -59,13 +60,43 @@
   justify-content: space-around;
   flex-wrap: wrap;
   margin-bottom: 5rem;
+  margin-top: -14rem;
 }
 
-.social-area p, .copyright p {
+.footer-text {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-text p {
   font-size: 0.8rem;
 }
 
-/* .card-big-shadow {
-  width: 400px;
-  height: 200px; 
-} */
+.row {
+  justify-content: center;
+}
+
+#confirmed {
+  color: orange;
+  margin-left: 2rem;
+}
+
+#recovered {
+  color: green;
+  margin-left: 2.7rem;
+}
+
+#deaths {
+  color: red;
+  margin-left: 1.2rem;
+}
+
+.lastUpdated {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.earthVector {
+  margin-top: -2rem;
+}
