@@ -34,14 +34,6 @@
 .footer-text p {
   font-size: 0.8rem;
 }
-/* 
-.footer-text a {
-  color: red;
-}
-
-.footer-text a:hover {
-  color: #dc143c;
-} */
 
 #confirmed {
   color: orange;
@@ -73,14 +65,43 @@
 }
 
 .nav-link:hover {
-  color: #5BA3D1!important;
+  color: #5ba3d1 !important;
 }
 
 .navbar-brand:hover {
-  color: #5BA3D1 !important;
+  color: #5ba3d1 !important;
 }
 
 .dark {
   color: #dadada;
   background: #1c2022;
 }
+
+@media only screen and (max-width: 1089px) {
+  .btn-clear {
+    margin-right: 3rem !important;
+  }
+  .homeHeader,
+  .usHeader {
+    margin-top: 12rem;
+  }
+}
+
+@media only screen and (max-width: 885px) {
+  .us-map {
+    margin-top: -6rem;
+  }
+  .earthVector {
+    margin-top: 0;
+  }
+  .globalStats {
+    margin-top: -11rem;
+  }
+}
+
+@media only screen and (max-width: 827px) {
+  .globalStats {
+    margin-top: -9rem;
+  }
+}
+

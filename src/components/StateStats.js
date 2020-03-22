@@ -1,8 +1,10 @@
 import React from "react";
 
+
 const StateStats = ({ state, positive, negative, death, lastUpdate }) => {
+
   return (
-    <section>
+    <section className="stateStats">
       <p><strong>{state}</strong></p>
       <p>Positive: {positive}</p>
       <p>Negative: {negative}</p>
