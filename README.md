@@ -1,14 +1,14 @@
 # Covid-19 Tracker
 
-React web app for tracking confirmed cases, recoveries, and deaths associated with Covid-19 globally and across the US. 
+React web app for tracking confirmed cases, recoveries, and deaths associated with Covid-19 globally and across the US.
 
 [See it live](https://covid19-cases-tracker.netlify.com/)
 
 ## Data
 
-[Mathdroid](https://github.com/mathdroid/covid-19-api) API: global data (confirmed cases, recoveries, and deaths)
+[Mathdroid](https://github.com/mathdroid/covid-19-api): global data (confirmed cases, recoveries, and deaths)
 
-[The COVID Tracking Project](https://covidtracking.com/) API: US state data (positive and negative tests, deaths) 
+[The COVID Tracking Project](https://covidtracking.com/): US state data (positive and negative tests, deaths)
 
 ## Tech
 
@@ -20,14 +20,16 @@ React web app for tracking confirmed cases, recoveries, and deaths associated wi
 - Bootstrapped with [create-react-app](https://github.com/facebook/create-react-app)
 
 ## Demo
-f
-![](covid19tracker.gif)
+
+![](covid19trackerdemo.gif)
 
 ## Run locally
 
-`$ git clone https://github.com/jenross/covid-19_tracker.git`
-`$ cd covid-19_tracker`
-`$ yarn install`
-`$ yarn start`
+```bash
+$ git clone https://github.com/jenross/covid-19_tracker.git
+$ cd covid-19_tracker
+$ yarn install
+$ yarn start
+```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000) in your browser
