@@ -10,6 +10,8 @@ import {
   Annotation
 } from "react-simple-maps";
 import useFetch from "../utils/useReducer";
+import ThemeContext from "../contexts/theme";
+import AppTheme from "../utils/AppTheme";
 import allStates from "../utils/allStates.json";
 import { format } from "date-fns";
 
@@ -33,9 +35,17 @@ function US({ setTooltipContent }) {
   );
 
   const stats = response || [];
+  const theme = React.useContext(ThemeContext);
+  const currentTheme = AppTheme[theme];
 
   return (
-    <div className="usPage">
+    <div
+      className="usPage"
+      style={{
+        backgroundColor: `${currentTheme.backgroundColor}`,
+        color: `${currentTheme.textColor}`
+      }}
+    >
       <header className="usHeader">
         <h1>US Stats</h1>
       </header>
@@ -83,7 +93,7 @@ function US({ setTooltipContent }) {
                     }}
                     style={{
                       default: {
-                        fill: "#B0C4DE",
+                        fill: "#8293A4",
                         outline: "none"
                       },
                       hover: {

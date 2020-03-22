@@ -1,10 +1,10 @@
 import React from "react";
 import ThemeContext from "../contexts/theme";
-import AppTheme from "../utils/AppTheme";
+import NavTheme from "../utils/NavTheme";
 
 export default function Footer() {
   const theme = React.useContext(ThemeContext);
-  const currentTheme = AppTheme[theme];
+  const currentTheme = NavTheme[theme];
   return (
     <footer
       class="footer"
@@ -27,7 +27,7 @@ export default function Footer() {
               </a>
             </p>
             <p>
-              Global data:{" "}
+              Data:{" "}
               <a
                 href="https://github.com/mathdroid/covid-19-api"
                 rel="noopener noreferrer"
@@ -35,10 +35,7 @@ export default function Footer() {
               >
                 Mathdroid
               </a>{" "}
-              API
-            </p>
-            <p>
-              US data:{" "}
+              (Global),{" "}
               <a
                 href="https://github.com/COVID19Tracking/website/blob/master/_src/api.md"
                 rel="noopener noreferrer"
@@ -46,7 +43,7 @@ export default function Footer() {
               >
                 The COVID Tracking Project
               </a>{" "}
-              API
+              (US)
             </p>
           </div>
         </div>

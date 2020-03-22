@@ -5,7 +5,7 @@ const NavTheme = {
   },
   dark: {
     textColor: "#fff",
-    backgroundColor: "#333"
+    backgroundColor: "#4F4E4E"
   }
 };
 
