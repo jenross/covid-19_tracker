@@ -1,6 +1,6 @@
 import React from "react";
 import ThemeContext from "../contexts/theme";
-import NavTheme from "../utils/NavTheme";
+import NavTheme from "../utils/NavFooterTheme";
 
 export default function Footer() {
   const theme = React.useContext(ThemeContext);

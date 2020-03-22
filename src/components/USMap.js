@@ -48,6 +48,7 @@ function US({ setTooltipContent }) {
     >
       <header className="usHeader">
         <h1>US Stats</h1>
+        <p className="hover-on-directions">(hover on each state)</p>
       </header>
       <main>
         <section>
@@ -68,25 +69,24 @@ function US({ setTooltipContent }) {
                     onMouseEnter={() => {
                       const abbrev = allStates.find(s => s.val === geo.id);
 
-                      for (let i = 0; i < stats.length; i++) {
+                      stats.forEach(function(stat) {
                         const formattedDate = format(
-                          new Date(stats[i] && stats[i].lastUpdateEt),
+                          new Date(stat && stat.lastUpdateEt),
                           "MM/dd hh:mm aa"
                         );
-                        if (abbrev.id === stats[i].state) {
+
+                        if (abbrev.id === stat.state) {
                           setTooltipContent(
                             <StateStats
-                              state={stats[i] && stats[i].state}
-                              positive={stats[i] && stats[i].positive}
-                              negative={stats[i] && stats[i].negative}
-                              death={
-                                (stats[i] && stats[i].death) || "None reported"
-                              }
+                              state={stat && stat.state}
+                              positive={stat && stat.positive}
+                              negative={stat && stat.negative}
+                              death={(stat && stat.death) || "None reported"}
                               lastUpdate={formattedDate}
                             />
                           );
                         }
-                      }
+                      });
                     }}
                     onMouseLeave={() => {
                       setTooltipContent("");

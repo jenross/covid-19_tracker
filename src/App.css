@@ -77,15 +77,12 @@
   background: #1c2022;
 }
 
-/* @media only screen and (max-width: 1196px) {
-  .btn-clear {
-    margin-right: 2rem !important;
+@media only screen and (max-width: 1060px) {
+
+  .footer-text {
+    margin-bottom: 100%;
   }
-  .homeHeader,
-  .usHeader {
-    margin-top: 0;
-  }
-} */
+}
 
 @media only screen and (max-width: 1024px) {
   .stateStats p {
@@ -94,6 +91,7 @@
   .us-map {
     margin-top: -8rem;
   }
+
 }
 
 @media only screen and (max-width: 1000px) {
@@ -107,9 +105,7 @@
   .us-map {
     margin-top: -8rem;
   }
-  .footer-text {
-    margin-bottom: 100%;
-  }
+
 }
 
 @media only screen and (max-width: 885px) {
@@ -132,6 +128,9 @@
 }
 
 @media only screen and (max-width: 827px) {
+  .hover-on-directions {
+    font-size: 0.6rem;
+  }
   .navbar-brand,
   .nav-link {
     font-size: 0.7rem !important;
@@ -220,6 +219,9 @@
   }
 
   .stateStats p {
+    font-size: 0.5rem;
+  }
+  .hover-on-directions {
     font-size: 0.5rem;
   }
 }

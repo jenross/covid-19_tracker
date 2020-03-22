@@ -1,7 +1,7 @@
 import React from "react";
 import ThemeContext from "../contexts/theme";
 import { Link } from "react-router-dom";
-import NavTheme from "../utils/NavTheme";
+import NavTheme from "../utils/NavFooterTheme";
 
 export default function Nav({ toggleTheme }) {
   const theme = React.useContext(ThemeContext);
