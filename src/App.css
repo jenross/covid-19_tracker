@@ -100,8 +100,34 @@
 }
 
 @media only screen and (max-width: 827px) {
+  .navbar-brand,
+  .nav-link {
+    font-size: 0.7rem !important;
+    padding: .5rem !important;
+  }
+  .btn-clear {
+    font-size: 20px !important;
+  }
+
   .globalStats {
     margin-top: -9rem;
   }
-}
+  .homeHeader,
+  .usHeader {
+    font-size: 0.5rem;
+  }
+  .lastUpdated {
+    font-size: 0.7rem;
+  }
+  .globalHeader {
+    font-size: 1.5rem;
+  }
 
+  .globalNum {
+    font-size: 1rem;
+  }
+
+  .footer-text p {
+    font-size: 0.6rem;
+  }
+}
