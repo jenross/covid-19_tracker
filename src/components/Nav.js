@@ -18,7 +18,7 @@ export default function Nav({ toggleTheme }) {
         <div className="navbar-translate">
           <Link
             d="navbar-brand"
-            class="navbar-brand"
+            className="navbar-brand"
             to="/"
             style={{
               color: `${currentTheme.textColor}`
@@ -28,8 +28,8 @@ export default function Nav({ toggleTheme }) {
           </Link>
         </div>
         <div>
-          <ul class="ml-auto navbar-nav">
-            <li class="nav-item">
+          <ul className="ml-auto navbar-nav">
+            <li className="nav-item">
               <Link
                 aria-haspopup="true"
                 className="mr-4 nav-link"
@@ -42,7 +42,7 @@ export default function Nav({ toggleTheme }) {
                 World
               </Link>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <Link
                 aria-haspopup="true"
                 className="mr-4 nav-link"

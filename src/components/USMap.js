@@ -110,7 +110,6 @@ function US({ setTooltipContent }) {
                 {geographies.map(geo => {
                   const centroid = geoCentroid(geo);
                   const cur = allStates.find(s => s.val === geo.id);
-                  console.log(cur.id);
                   return (
                     <g key={geo.rsmKey + "-name"}>
                       {cur &&
