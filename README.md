@@ -20,7 +20,7 @@ React web app for tracking confirmed cases, recoveries, and deaths associated wi
 - Bootstrapped with [create-react-app](https://github.com/facebook/create-react-app)
 
 ## Demo
-
+f
 ![](covid19tracker.gif)
 
 ## Run locally
