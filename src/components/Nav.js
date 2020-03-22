@@ -9,13 +9,13 @@ export default function Nav({ toggleTheme }) {
   return (
     <nav
       id="navbar-main"
-      class="navbar navbar-expand-lg headroom--not-top headroom--not-bottom headroom"
+      className="navbar navbar-expand-lg headroom--not-top headroom--not-bottom headroom"
       style={{
         backgroundColor: `${currentTheme.backgroundColor}`
       }}
     >
-      <div class="container">
-        <div class="navbar-translate">
+      <div className="container">
+        <div className="navbar-translate">
           <Link
             d="navbar-brand"
             class="navbar-brand"
