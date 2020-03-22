@@ -70,10 +70,10 @@ function US({ setTooltipContent }) {
                       const abbrev = allStates.find(s => s.val === geo.id);
 
                       stats.forEach(function(stat) {
-                        const formattedDate = format(
-                          new Date(stat && stat.lastUpdateEt),
-                          "MM/dd hh:mm aa"
-                        );
+                        // const formattedDate = format(
+                        //   new Date(stat && stat.lastUpdateEt),
+                        //   "MM/dd hh:mm"
+                        // );
 
                         if (abbrev.id === stat.state) {
                           setTooltipContent(
@@ -82,7 +82,7 @@ function US({ setTooltipContent }) {
                               positive={stat && stat.positive}
                               negative={stat && stat.negative}
                               death={(stat && stat.death) || "None reported"}
-                              lastUpdate={formattedDate}
+                              lastUpdate={stat && stat.lastUpdateEt}
                             />
                           );
                         }
