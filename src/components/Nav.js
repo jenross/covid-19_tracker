@@ -9,7 +9,7 @@ export default function Nav({ toggleTheme }) {
   return (
     <nav
       id="navbar-main"
-      class="fixed-top navbar navbar-expand-lg headroom--not-top headroom--not-bottom headroom headroom--pinned"
+      class="navbar navbar-expand-lg headroom--not-top headroom--not-bottom headroom"
       style={{
         backgroundColor: `${currentTheme.backgroundColor}`
       }}

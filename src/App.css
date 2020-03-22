@@ -28,6 +28,7 @@
 
 .footer-text {
   margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .footer-text p {
@@ -87,10 +88,6 @@
 } */
 
 @media only screen and (max-width: 1024px) {
-  .homeHeader,
-  .usHeader {
-    padding-top: 7rem;
-  }
   .stateStats p {
     font-size: 0.7rem;
   }
@@ -103,15 +100,15 @@
   .btn-clear {
     margin-right: 2rem !important;
   }
-  .homeHeader,
-  .usHeader {
-    padding-top: 16rem;
-  }
+
   .stateStats p {
     font-size: 0.7rem;
   }
   .us-map {
     margin-top: -8rem;
+  }
+  .footer-text {
+    margin-bottom: 100%;
   }
 }
 
@@ -188,10 +185,6 @@
     margin-bottom: 1rem;
   }
 
-  .homeHeader,
-  .usHeader {
-    padding-top: 12rem;
-  }
   .homeHeader,
   .usHeader {
     font-size: 0.4rem;
