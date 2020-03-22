@@ -18,6 +18,7 @@ React web app for tracking confirmed cases, recoveries, and deaths associated wi
 - [React Tooltip](https://www.npmjs.com/package/react-tooltip)
 - Bootstrapped with [create-react-app](https://github.com/facebook/create-react-app)
 - Theme context for light/dark mode and loading component adapted from [Tyler McGinnis' React courses](https://tylermcginnis.com/)
+- Font & Styles from [Creative Tim's Paper Kit 2](https://www.creative-tim.com/product/paper-kit-2) (free Bootstrap UI Kit)
 
 ## Demo
 
