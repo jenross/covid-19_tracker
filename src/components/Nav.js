@@ -32,7 +32,7 @@ export default function Nav({ toggleTheme }) {
             <li class="nav-item">
               <Link
                 aria-haspopup="true"
-                class="mr-4 nav-link"
+                className="mr-4 nav-link"
                 aria-expanded="false"
                 to="/"
                 style={{
@@ -45,7 +45,7 @@ export default function Nav({ toggleTheme }) {
             <li class="nav-item">
               <Link
                 aria-haspopup="true"
-                class="mr-4 nav-link"
+                className="mr-4 nav-link"
                 aria-expanded="false"
                 to="/us"
                 style={{

@@ -28,7 +28,6 @@
 
 .footer-text {
   margin-top: 2rem;
-  margin-bottom: 2rem;
 }
 
 .footer-text p {
@@ -77,17 +76,49 @@
   background: #1c2022;
 }
 
-@media only screen and (max-width: 1089px) {
+/* @media only screen and (max-width: 1196px) {
   .btn-clear {
-    margin-right: 3rem !important;
+    margin-right: 2rem !important;
   }
   .homeHeader,
   .usHeader {
-    margin-top: 12rem;
+    margin-top: 0;
+  }
+} */
+
+@media only screen and (max-width: 1024px) {
+  .homeHeader,
+  .usHeader {
+    padding-top: 7rem;
+  }
+  .stateStats p {
+    font-size: 0.7rem;
+  }
+  .us-map {
+    margin-top: -8rem;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .btn-clear {
+    margin-right: 2rem !important;
+  }
+  .homeHeader,
+  .usHeader {
+    padding-top: 16rem;
+  }
+  .stateStats p {
+    font-size: 0.7rem;
+  }
+  .us-map {
+    margin-top: -8rem;
   }
 }
 
 @media only screen and (max-width: 885px) {
+  .btn-clear {
+    margin-right: 3rem !important;
+  }
   .us-map {
     margin-top: -6rem;
   }
@@ -95,7 +126,11 @@
     margin-top: 0;
   }
   .globalStats {
-    margin-top: -11rem;
+    margin-top: -16rem;
+  }
+
+  .stateStats p {
+    font-size: 0.7rem;
   }
 }
 
@@ -103,14 +138,18 @@
   .navbar-brand,
   .nav-link {
     font-size: 0.7rem !important;
-    padding: .5rem !important;
+    padding: 0.5rem !important;
   }
   .btn-clear {
-    font-size: 20px !important;
+    font-size: 15px !important;
   }
 
   .globalStats {
-    margin-top: -9rem;
+    margin-top: -7rem;
+    margin-bottom: 5rem;
+  }
+  .earthVector {
+    margin-top: 2rem;
   }
   .homeHeader,
   .usHeader {
@@ -129,5 +168,65 @@
 
   .footer-text p {
     font-size: 0.6rem;
+  }
+  .us-map {
+    margin-bottom: 4rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar-brand,
+  .nav-link {
+    font-size: 0.5rem !important;
+    padding: 0.3rem !important;
+  }
+  .btn-clear {
+    font-size: 13px !important;
+  }
+
+  .earthVector {
+    margin-bottom: 1rem;
+  }
+
+  .homeHeader,
+  .usHeader {
+    padding-top: 12rem;
+  }
+  .homeHeader,
+  .usHeader {
+    font-size: 0.4rem;
+  }
+  .lastUpdated {
+    font-size: 0.5rem;
+  }
+  .globalHeader {
+    font-size: 0.9rem;
+  }
+
+  .globalNum {
+    font-size: 0.7rem;
+  }
+
+  .footer-text p {
+    font-size: 0.5rem;
+    padding-left: 1rem;
+  }
+  .us-map {
+    margin-bottom: 4rem;
+  }
+  #confirmed {
+    margin-left: 1rem;
+  }
+
+  #recovered {
+    margin-left: 1.25rem;
+  }
+
+  #deaths {
+    margin-left: 0.6rem;
+  }
+
+  .stateStats p {
+    font-size: 0.5rem;
   }
 }
