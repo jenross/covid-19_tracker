@@ -35,6 +35,14 @@
   font-size: 0.8rem;
 }
 
+.footer-text p a {
+  color: #5ba3d1;
+}
+
+.footer-text p a:hover {
+  text-decoration: underline;
+}
+
 #confirmed {
   color: orange;
   margin-left: 2rem;
@@ -78,7 +86,6 @@
 }
 
 @media only screen and (max-width: 1060px) {
-
   .footer-text {
     margin-bottom: 100%;
   }
@@ -91,7 +98,6 @@
   .us-map {
     margin-top: -8rem;
   }
-
 }
 
 @media only screen and (max-width: 1000px) {
@@ -105,7 +111,6 @@
   .us-map {
     margin-top: -8rem;
   }
-
 }
 
 @media only screen and (max-width: 885px) {
