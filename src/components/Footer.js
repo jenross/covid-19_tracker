@@ -7,15 +7,15 @@ export default function Footer() {
   const currentTheme = NavTheme[theme];
   return (
     <footer
-      class="footer"
+      className="footer"
       style={{
         backgroundColor: `${currentTheme.backgroundColor}`,
         color: `${currentTheme.textColor}`
       }}
     >
-      <div class="container">
-        <div class="row">
-          <div class="footer-text">
+      <div className="container">
+        <div className="row">
+          <div className="footer-text">
             <p>
               © 2020, developed by{" "}
               <a

@@ -45,17 +45,17 @@
 
 #confirmed {
   color: orange;
-  margin-left: 2rem;
+  margin-left: 1.5rem;
 }
 
 #recovered {
   color: green;
-  margin-left: 2.7rem;
+  margin-left: 1.8rem;
 }
 
 #deaths {
   color: red;
-  margin-left: 1.2rem;
+  margin-left: 0.5rem;
 }
 
 .lastUpdated {
@@ -215,15 +215,15 @@
     margin-bottom: 4rem;
   }
   #confirmed {
-    margin-left: 1rem;
+    margin-left: 0.5rem;
   }
 
   #recovered {
-    margin-left: 1.25rem;
+    margin-left: 0.8rem;
   }
 
   #deaths {
-    margin-left: 0.6rem;
+    margin-left: 0.2rem;
   }
 
   .stateStats p {
