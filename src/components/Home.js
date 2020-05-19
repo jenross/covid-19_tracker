@@ -19,20 +19,24 @@ function Home() {
   const stats = response || [];
   const theme = React.useContext(ThemeContext);
   const currentTheme = AppTheme[theme];
-  const formattedDate = dateString =>
+  const formattedDate = (dateString) =>
     format(parseISO(dateString || new Date()), "MM/dd/yyyy, HH:mm");
 
   return (
     <div
       className="homePage"
-      style={{
-        backgroundColor: `${currentTheme.backgroundColor}`,
-        color: `${currentTheme.textColor}`
-      }}
+      // style={{
+      //   backgroundColor: `${currentTheme.backgroundColor}`,
+      //   color: `${currentTheme.textColor}`,
+      // }}
     >
       <header className="homeHeader">
         <h1>Global Stats</h1>
-        <p className="lastUpdated">
+        <p
+          data-testid="last-updated"
+          className="lastUpdated"
+          value={stats.lastUpdate}
+        >
           Last updated: {stats.lastUpdate && formattedDate(stats.lastUpdate)}
         </p>
         {theme === "light" ? (
@@ -60,7 +64,11 @@ function Home() {
               recovered={stats.recovered && stats.recovered.value}
             />
           )}
-          {error && <p className="error">{error.message}</p>}
+          {error && (
+            <p data-testid="error" className="error">
+              {error.message}
+            </p>
+          )}
         </section>
       </main>
       <Footer />

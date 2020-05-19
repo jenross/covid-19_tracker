@@ -12,7 +12,13 @@ const GlobalStats = ({ confirmed, dead, recovered }) => {
           <p className="card-description">
             <CountUp start={0} end={confirmed} delay={0} separator=", ">
               {({ countUpRef }) => (
-                <span id="confirmed" className="globalNum" ref={countUpRef} />
+                <span
+                  data-testid="confirmed"
+                  id="confirmed"
+                  className="globalNum"
+                  ref={countUpRef}
+                  value={confirmed}
+                />
               )}
             </CountUp>
           </p>
@@ -25,7 +31,13 @@ const GlobalStats = ({ confirmed, dead, recovered }) => {
           <p className="card-description">
             <CountUp start={0} end={recovered} delay={0} separator=", ">
               {({ countUpRef }) => (
-                <span id="recovered" className="globalNum" ref={countUpRef} />
+                <span
+                  data-testid="recovered"
+                  id="recovered"
+                  className="globalNum"
+                  ref={countUpRef}
+                  value={recovered}
+                />
               )}
             </CountUp>
           </p>
@@ -38,7 +50,13 @@ const GlobalStats = ({ confirmed, dead, recovered }) => {
           <p className="card-description">
             <CountUp start={0} end={dead} delay={0} separator=", ">
               {({ countUpRef }) => (
-                <span id="deaths" className="globalNum" ref={countUpRef} />
+                <span
+                  data-testid="deaths"
+                  id="deaths"
+                  className="globalNum"
+                  ref={countUpRef}
+                  value={dead}
+                />
               )}
             </CountUp>
           </p>

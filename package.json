@@ -9,9 +9,8 @@
     "d3-fetch": "^1.1.2",
     "d3-scale": "^3.2.1",
     "date-fns": "^2.11.0",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.2",
-    "jest": "^26.0.1",
+    "jest": "24.9.0",
+    "jest-fetch-mock": "^3.0.3",
     "react": "^16.13.0",
     "react-countup": "^4.3.3",
     "react-dom": "^16.13.0",
@@ -24,7 +23,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build && echo '/* /index.html  200' | cat >build/_redirects ",
-    "test": "jest --config ./jest.config.json",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

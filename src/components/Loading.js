@@ -8,15 +8,15 @@ const styles = {
     left: "0",
     right: "0",
     marginTop: "20px",
-    textAlign: "center"
-  }
+    textAlign: "center",
+  },
 };
 
 export default function Loading({ text = "Loading", speed = 300 }) {
   const [content, setContent] = React.useState(text);
   React.useEffect(() => {
     const id = window.setInterval(() => {
-      setContent(content => {
+      setContent((content) => {
         return content === `${text}...` ? text : `${content}.`;
       });
     }, speed);
@@ -24,10 +24,14 @@ export default function Loading({ text = "Loading", speed = 300 }) {
     return () => window.clearInterval(id);
   }, [text, speed]);
 
-  return <p style={styles.content}>{content}</p>;
+  return (
+    <p data-testid="loading" style={styles.content}>
+      {content}
+    </p>
+  );
 }
 
 Loading.propTypes = {
   text: PropTypes.string,
-  speed: PropTypes.number
+  speed: PropTypes.number,
 };
