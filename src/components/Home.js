@@ -25,10 +25,10 @@ function Home() {
   return (
     <div
       className="homePage"
-      // style={{
-      //   backgroundColor: `${currentTheme.backgroundColor}`,
-      //   color: `${currentTheme.textColor}`,
-      // }}
+      style={{
+        backgroundColor: `${currentTheme.backgroundColor}`,
+        color: `${currentTheme.textColor}`,
+      }}
     >
       <header className="homeHeader">
         <h1>Global Stats</h1>

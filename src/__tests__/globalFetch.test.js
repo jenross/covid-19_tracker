@@ -1,9 +1,8 @@
 import React from "react";
 import { render, cleanup, waitForElement } from "@testing-library/react";
+import { MemoryRouter } from "react-router-dom";
 import Loading from "../components/Loading";
-import GlobalStats from "../components/GlobalStats";
-import ThemeContext from "../contexts/theme";
-import AppTheme from "../utils/AppTheme";
+// import GlobalStats from "../components/GlobalStats";
 import Home from "../components/Home";
 
 global.fetch = require("jest-fetch-mock");
@@ -37,10 +36,9 @@ test("<Home />", async () => {
   fetch.mockResponseOnce(JSON.stringify(stats));
 
   const { getByTestId, queryByTestId, debug } = render(
-    <Home>
-      <Loading />
-      <GlobalStats />
-    </Home>
+    <MemoryRouter>
+      <Home />
+    </MemoryRouter>
   );
 
   expect(getByTestId("loading")).toBeTruthy();
@@ -69,10 +67,9 @@ test("<Home /> api fail", async () => {
   fetch.mockResponseOnce(JSON.stringify(stats));
 
   const { getByTestId } = render(
-    <Home>
-      <Loading />
-      <GlobalStats />
-    </Home>
+    <MemoryRouter>
+      <Home />
+    </MemoryRouter>
   );
   expect(getByTestId("loading")).toBeTruthy();
 });

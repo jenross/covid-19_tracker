@@ -7,7 +7,7 @@ import {
   Geographies,
   Geography,
   Marker,
-  Annotation
+  Annotation,
 } from "react-simple-maps";
 import useFetch from "../utils/useReducer";
 import ThemeContext from "../contexts/theme";
@@ -26,7 +26,7 @@ const offsets = {
   NJ: [34, 1],
   DE: [33, 0],
   MD: [47, 10],
-  DC: [49, 21]
+  DC: [49, 21],
 };
 
 function US({ setTooltipContent }) {
@@ -35,6 +35,7 @@ function US({ setTooltipContent }) {
   );
 
   const stats = response || [];
+
   const theme = React.useContext(ThemeContext);
   const currentTheme = AppTheme[theme];
 
@@ -58,18 +59,19 @@ function US({ setTooltipContent }) {
         </section>
         <ComposableMap data-tip="" projection="geoAlbersUsa" className="us-map">
           <Geographies geography={geoUrl}>
+            {/* if (!geo) return Object.assign(window.geo, {}); */}
             {({ geographies }) => (
               <>
-                {geographies.map(geo => (
+                {geographies.map((geo) => (
                   <Geography
                     key={geo.rsmKey}
                     stroke="#000"
                     geography={geo}
                     fill="#808080"
                     onMouseEnter={() => {
-                      const abbrev = allStates.find(s => s.val === geo.id);
+                      const abbrev = allStates.find((s) => s.val === geo.id);
 
-                      stats.forEach(function(stat) {
+                      stats.forEach(function (stat) {
                         // const formattedDate = format(
                         //   new Date(stat && stat.lastUpdateEt),
                         //   "MM/dd hh:mm"
@@ -94,22 +96,22 @@ function US({ setTooltipContent }) {
                     style={{
                       default: {
                         fill: "#8293A4",
-                        outline: "none"
+                        outline: "none",
                       },
                       hover: {
                         fill: "#B22222",
-                        outline: "none"
+                        outline: "none",
                       },
                       pressed: {
                         fill: "#B22222",
-                        outline: "none"
-                      }
+                        outline: "none",
+                      },
                     }}
                   />
                 ))}
-                {geographies.map(geo => {
+                {geographies.map((geo) => {
                   const centroid = geoCentroid(geo);
-                  const cur = allStates.find(s => s.val === geo.id);
+                  const cur = allStates.find((s) => s.val === geo.id);
                   return (
                     <g key={geo.rsmKey + "-name"}>
                       {cur &&

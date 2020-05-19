@@ -1,15 +1,23 @@
 import React from "react";
 
-
 const StateStats = ({ state, positive, negative, death, lastUpdate }) => {
-
   return (
     <section className="stateStats">
-      <p><strong>{state}</strong></p>
-      <p>Positive: {positive}</p>
-      <p>Negative: {negative}</p>
-      <p>Deaths: {death}</p>
-      <p>Last Updated: {lastUpdate}</p>
+      <p data-testid="state" value={state}>
+        <strong>{state}</strong>
+      </p>
+      <p data-testid="positive" value={positive}>
+        Positive: {positive}
+      </p>
+      <p data-testid="negative" value={negative}>
+        Negative: {negative}
+      </p>
+      <p data-testid="state-deaths" value={death}>
+        Deaths: {death}
+      </p>
+      <p data-testid="state-last-updated" value={lastUpdate}>
+        Last Updated: {lastUpdate}
+      </p>
     </section>
   );
 };
